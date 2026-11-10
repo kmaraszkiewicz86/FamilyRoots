@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="FamilyRoots.UI/FamilyRoots.UI.csproj" />
+  <Project Path="FamilyRoots.UI.Tests/FamilyRoots.UI.Tests.csproj" />
+  <Project Path="FamilyRoots.UI/FamilyRoots.UI.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
