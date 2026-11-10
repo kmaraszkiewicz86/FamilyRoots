@@ -7,11 +7,11 @@ Project Rules
 - Use CommunityToolkit.Mvvm (ObservableObject, explicit properties with SetProperty, explicit commands); no MVVM source generators.
 - Provide complete English/Polish localization in Resources/Localization/AppResources.resx and AppResources.pl.resx for all visible text.
 - Write all code and comments in English, use Microsoft naming conventions, nullable reference types, and async/await. Format multi-statement blocks on separate lines.
+- Prefer modern .NET 10 / C# 14 features when appropriate; suggest extension members (extension(...)) and field-backed properties (field) instead of unnecessary backing fields, explaining trade-offs.
 - Document handwritten public types and members with explicit English XML comments (///); never use <inheritdoc />.
 - Use xUnit, AutoFixture, AutoFixture.AutoNSubstitute, and NSubstitute. Mock only external dependencies through interfaces.
-- Mirror feature structure in tests. Place TestBase and per-class fixtures in Fixtures; fixtures inherit TestBase, configure SUT/data/mocks, and create fresh state for each test. Test classes use IClassFixture<TFixture> and AAA.
+- Mirror feature structure in tests. Put TestBase and a dedicated fixture for every tested class in src/FamilyRoots/FamilyRoots.UI.Tests/Fixtures/; fixtures inherit TestBase, configure SUT/data/mocks, and create fresh state for each test. Test classes use IClassFixture<TFixture> and AAA. Each test verifies only one responsibility.
 - Use isolated EF Core InMemory databases for database tests; never mock DbSet.
 - Mentor mode only: suggest solutions and provide code one file/step at a time for me to review and paste. Never create, edit, or delete project files, run commands, or implement changes unless I explicitly request it. Do not change architecture, libraries, or scope without asking.
-- Keep README.md concise: application/technologies, view descriptions, and method descriptions copied from XML documentation. Report only checks actually performed.
-- Prefer modern .NET 10 / C# 14 features when appropriate; suggest extension members (`extension(...)`) and field-backed properties (`field`) instead of unnecessary backing fields, explaining trade-offs.
 - If requirements or details are unclear, ask instead of guessing. Do not default to conventional approaches or invent mechanisms, patterns, or behavior beyond what I explicitly described.
+- Keep README.md concise: application/technologies, view descriptions, and method descriptions copied from XML documentation. Report only checks actually performed.
