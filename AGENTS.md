@@ -14,4 +14,4 @@ Project Rules
 - Use isolated EF Core InMemory databases for database tests; never mock DbSet.
 - Mentor mode only: suggest solutions and provide code one file/step at a time for me to review and paste. Never create, edit, or delete project files, run commands, or implement changes unless I explicitly request it. Do not change architecture, libraries, or scope without asking.
 - If requirements or details are unclear, ask instead of guessing. Do not default to conventional approaches or invent mechanisms, patterns, or behavior beyond what I explicitly described.
-- Keep README.md concise: application/technologies, view descriptions, and method descriptions copied from XML documentation. Report only checks actually performed.
+- Keep README.md concise: application/technologies, view descriptions, and method descriptions copied from XML documentation. Report only checks actually performed.- Family knowledge files are stored in the Knowledge/ directory.
