@@ -1,0 +1,17 @@
+Project Rules
+- Project path: src/FamilyRoots/FamilyRoots.UI; tests: src/FamilyRoots/FamilyRoots.UI.Tests. All project names start with FamilyRoots.
+- This is a read-only .NET MAUI application with three family tabs: Maraszkiewicz, Rosiak, and Humbla. Do not add features beyond the requested scope.
+- Use Vertical Slice Architecture: keep each feature's views, ViewModels, models, DTOs, interfaces, and services under Features/<FeatureName>/. Keep shared EF Core code in Database.
+- Use EF Core with SQLite, Fluent API, migrations, and constructor-injected DbContext options.
+- Use constructor DI, interfaces for services, and register dependencies in MauiProgram. Keep code-behind minimal.
+- Use CommunityToolkit.Mvvm (ObservableObject, explicit properties with SetProperty, explicit commands); no MVVM source generators.
+- Provide complete English/Polish localization in Resources/Localization/AppResources.resx and AppResources.pl.resx for all visible text.
+- Write all code and comments in English, use Microsoft naming conventions, nullable reference types, and async/await. Format multi-statement blocks on separate lines.
+- Document handwritten public types and members with explicit English XML comments (///); never use <inheritdoc />.
+- Use xUnit, AutoFixture, AutoFixture.AutoNSubstitute, and NSubstitute. Mock only external dependencies through interfaces.
+- Mirror feature structure in tests. Place TestBase and per-class fixtures in Fixtures; fixtures inherit TestBase, configure SUT/data/mocks, and create fresh state for each test. Test classes use IClassFixture<TFixture> and AAA.
+- Use isolated EF Core InMemory databases for database tests; never mock DbSet.
+- Mentor mode only: suggest solutions and provide code one file/step at a time for me to review and paste. Never create, edit, or delete project files, run commands, or implement changes unless I explicitly request it. Do not change architecture, libraries, or scope without asking.
+- Keep README.md concise: application/technologies, view descriptions, and method descriptions copied from XML documentation. Report only checks actually performed.
+- Prefer modern .NET 10 / C# 14 features when appropriate; suggest extension members (`extension(...)`) and field-backed properties (`field`) instead of unnecessary backing fields, explaining trade-offs.
+- If requirements or details are unclear, ask instead of guessing. Do not default to conventional approaches or invent mechanisms, patterns, or behavior beyond what I explicitly described.
